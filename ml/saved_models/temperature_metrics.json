@@ -1,0 +1,49 @@
+{
+  "model_name": "GradientBoostingRegressor (Reservoir Thermal Decay)",
+  "features": [
+    "avg_pressure_bar",
+    "oil_bpd",
+    "cum_steam_tons",
+    "energy_kwh",
+    "reservoir_depth_m",
+    "initial_res_temp_c",
+    "api_gravity"
+  ],
+  "metrics": {
+    "mae_c": 1.56,
+    "rmse_c": 3.19,
+    "r2_score": 0.9876,
+    "model_confidence_pct": 95.0
+  },
+  "feature_importances": [
+    {
+      "feature": "cum_steam_tons",
+      "importance_pct": 59.9
+    },
+    {
+      "feature": "avg_pressure_bar",
+      "importance_pct": 33.5
+    },
+    {
+      "feature": "oil_bpd",
+      "importance_pct": 5.4
+    },
+    {
+      "feature": "energy_kwh",
+      "importance_pct": 0.6
+    },
+    {
+      "feature": "api_gravity",
+      "importance_pct": 0.3
+    },
+    {
+      "feature": "reservoir_depth_m",
+      "importance_pct": 0.2
+    },
+    {
+      "feature": "initial_res_temp_c",
+      "importance_pct": 0.1
+    }
+  ],
+  "n_samples": 455
+}

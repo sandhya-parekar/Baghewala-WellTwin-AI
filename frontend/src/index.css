@@ -1,0 +1,468 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+/* =========================================================
+   BAGHEWALA WELLTWIN AI
+   GLOBAL THEME SYSTEM
+   ========================================================= */
+
+@layer base {
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* =======================================================
+     DARK MODE
+     ======================================================= */
+
+  html.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+  }
+
+  /* =======================================================
+     LIGHT MODE
+     ======================================================= */
+
+  html.light body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+}
+
+
+/* =========================================================
+   THEME VARIABLES
+   ========================================================= */
+
+:root {
+
+  /* Main colors */
+  --wt-bg-primary: #020617;
+  --wt-bg-secondary: #0f172a;
+  --wt-bg-panel: #111827;
+  --wt-bg-card: #172033;
+
+  /* Text */
+  --wt-text-primary: #f8fafc;
+  --wt-text-secondary: #94a3b8;
+  --wt-text-muted: #64748b;
+
+  /* Borders */
+  --wt-border: #1e293b;
+  --wt-border-light: #334155;
+
+  /* Accent */
+  --wt-accent: #f59e0b;
+  --wt-accent-dark: #d97706;
+
+  /* Shadows */
+  --wt-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   DARK THEME VARIABLES
+   ========================================================= */
+
+html.dark {
+
+  --wt-bg-primary: #020617;
+  --wt-bg-secondary: #0f172a;
+  --wt-bg-panel: #111827;
+  --wt-bg-card: #172033;
+
+  --wt-text-primary: #f8fafc;
+  --wt-text-secondary: #94a3b8;
+  --wt-text-muted: #64748b;
+
+  --wt-border: #1e293b;
+  --wt-border-light: #334155;
+
+  --wt-accent: #f59e0b;
+  --wt-accent-dark: #d97706;
+
+  --wt-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   LIGHT THEME VARIABLES
+   ========================================================= */
+
+html.light {
+
+  --wt-bg-primary: #f8fafc;
+  --wt-bg-secondary: #ffffff;
+  --wt-bg-panel: #ffffff;
+  --wt-bg-card: #f1f5f9;
+
+  --wt-text-primary: #0f172a;
+  --wt-text-secondary: #475569;
+  --wt-text-muted: #64748b;
+
+  --wt-border: #cbd5e1;
+  --wt-border-light: #94a3b8;
+
+  --wt-accent: #d97706;
+  --wt-accent-dark: #b45309;
+
+  --wt-shadow:
+    0 8px 20px -5px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   GLOBAL THEME TRANSITION
+   ========================================================= */
+
+.welltwin-app,
+.welltwin-app *,
+.welltwin-app *::before,
+.welltwin-app *::after {
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   INDUSTRIAL PANEL
+   ========================================================= */
+
+.industrial-panel {
+
+  background-color: var(--wt-bg-panel);
+
+  border: 1px solid var(--wt-border);
+
+  border-radius: 0.75rem;
+
+  box-shadow: var(--wt-shadow);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   INDUSTRIAL CARD
+   ========================================================= */
+
+.industrial-card {
+
+  background-color: var(--wt-bg-card);
+
+  border: 1px solid var(--wt-border);
+
+  border-radius: 0.5rem;
+
+  padding: 1rem;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   INDUSTRIAL CARD HOVER
+   ========================================================= */
+
+.industrial-card:hover {
+
+  border-color: var(--wt-border-light);
+
+  box-shadow:
+    0 8px 20px -5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   LIGHT MODE PANEL IMPROVEMENTS
+   ========================================================= */
+
+html.light .industrial-panel {
+
+  background-color: #ffffff;
+
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 8px 20px -5px rgba(15, 23, 42, 0.10);
+}
+
+
+html.light .industrial-card {
+
+  background-color: #ffffff;
+
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+
+html.light .industrial-card:hover {
+
+  border-color: #94a3b8;
+
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================================
+   DARK MODE PANEL
+   ========================================================= */
+
+html.dark .industrial-panel {
+
+  background-color: rgba(15, 23, 42, 0.90);
+
+  border-color: #1e293b;
+
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.40);
+}
+
+
+html.dark .industrial-card {
+
+  background-color: rgba(15, 23, 42, 0.60);
+
+  border-color: rgba(30, 41, 59, 0.80);
+}
+
+
+/* =========================================================
+   CUSTOM INDUSTRIAL SCROLLBARS
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+  width: 6px;
+
+  height: 6px;
+}
+
+
+/* DARK SCROLLBAR */
+
+html.dark ::-webkit-scrollbar-track {
+
+  background: #090d16;
+}
+
+
+html.dark ::-webkit-scrollbar-thumb {
+
+  background: #253347;
+
+  border-radius: 3px;
+}
+
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+
+  background: #3b4e68;
+}
+
+
+/* LIGHT SCROLLBAR */
+
+html.light ::-webkit-scrollbar-track {
+
+  background: #e2e8f0;
+}
+
+
+html.light ::-webkit-scrollbar-thumb {
+
+  background: #94a3b8;
+
+  border-radius: 3px;
+}
+
+
+html.light ::-webkit-scrollbar-thumb:hover {
+
+  background: #64748b;
+}
+
+
+/* =========================================================
+   RADAR / HEAT PULSE ANIMATION
+   ========================================================= */
+
+@keyframes heat-pulse {
+
+  0%,
+  100% {
+
+    opacity: 0.8;
+
+    transform: scale(1);
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform: scale(1.05);
+  }
+}
+
+
+.animate-heat {
+
+  animation:
+    heat-pulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   SRP ROD RECIPROCATION
+   ========================================================= */
+
+@keyframes rod-reciprocate {
+
+  0%,
+  100% {
+
+    transform: translateY(0px);
+  }
+
+  50% {
+
+    transform: translateY(35px);
+  }
+}
+
+
+.animate-rod {
+
+  animation:
+    rod-reciprocate 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   THEME-AWARE TEXT UTILITIES
+   ========================================================= */
+
+.wt-text-primary {
+
+  color: var(--wt-text-primary);
+}
+
+
+.wt-text-secondary {
+
+  color: var(--wt-text-secondary);
+}
+
+
+.wt-text-muted {
+
+  color: var(--wt-text-muted);
+}
+
+
+/* =========================================================
+   THEME-AWARE BACKGROUNDS
+   ========================================================= */
+
+.wt-bg-primary {
+
+  background-color: var(--wt-bg-primary);
+}
+
+
+.wt-bg-secondary {
+
+  background-color: var(--wt-bg-secondary);
+}
+
+
+.wt-bg-panel {
+
+  background-color: var(--wt-bg-panel);
+}
+
+
+.wt-bg-card {
+
+  background-color: var(--wt-bg-card);
+}
+
+
+/* =========================================================
+   THEME-AWARE BORDER
+   ========================================================= */
+
+.wt-border {
+
+  border-color: var(--wt-border);
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+
+  outline: 2px solid var(--wt-accent);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+html.dark ::selection {
+
+  background-color: #f59e0b;
+
+  color: #020617;
+}
+
+
+html.light ::selection {
+
+  background-color: #f59e0b;
+
+  color: #ffffff;
+}

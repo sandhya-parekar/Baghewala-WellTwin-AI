@@ -1,0 +1,64 @@
+{
+  "model_name": "RandomForestRegressor (Heavy Oil Production)",
+  "features": [
+    "reservoir_temp_c",
+    "reservoir_pressure_bar",
+    "oil_viscosity_cp",
+    "srp_spm",
+    "srp_stroke_in",
+    "srp_vfd_hz",
+    "srp_efficiency_pct",
+    "water_cut_pct",
+    "api_gravity",
+    "asphaltene_pct"
+  ],
+  "metrics": {
+    "mae_bpd": 1.56,
+    "rmse_bpd": 1.97,
+    "r2_score": 0.9998,
+    "model_confidence_pct": 96.0
+  },
+  "feature_importances": [
+    {
+      "feature": "srp_vfd_hz",
+      "importance_pct": 54.0
+    },
+    {
+      "feature": "srp_spm",
+      "importance_pct": 39.7
+    },
+    {
+      "feature": "asphaltene_pct",
+      "importance_pct": 1.6
+    },
+    {
+      "feature": "reservoir_temp_c",
+      "importance_pct": 1.5
+    },
+    {
+      "feature": "srp_efficiency_pct",
+      "importance_pct": 1.0
+    },
+    {
+      "feature": "water_cut_pct",
+      "importance_pct": 0.6
+    },
+    {
+      "feature": "reservoir_pressure_bar",
+      "importance_pct": 0.5
+    },
+    {
+      "feature": "api_gravity",
+      "importance_pct": 0.5
+    },
+    {
+      "feature": "oil_viscosity_cp",
+      "importance_pct": 0.4
+    },
+    {
+      "feature": "srp_stroke_in",
+      "importance_pct": 0.2
+    }
+  ],
+  "n_samples": 6812
+}
